@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin :0px;
+    box-sizing:border-box;
+}
+
+/* ------------------navbar ------------- */
+nav{
+    background-color: #fcca31;
+}
+nav .navbar-nav a.nav-link{
+    
+}
+nav button span{
+    color: red;
+}
+/* ------------------end navbar ------------- */
