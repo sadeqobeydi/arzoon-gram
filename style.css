@@ -1,17 +1,300 @@
 *{
-    padding: 0px;
-    margin :0px;
-    box-sizing:border-box;
+  padding: 0px;
+  margin :0px;
+  box-sizing:border-box;
+}
+a:hover , button:hover {
+  cursor: pointer;
 }
 
 /* ------------------navbar ------------- */
 nav{
-    background-color: #fcca31;
+  background: #fcca31;
+  transition: 0.5s;
 }
+
 nav .navbar-nav a.nav-link{
-    
+  border-radius: 0px;
+  transition: all .5s;
+  
+  
 }
-nav button span{
-    color: red;
+nav .navbar-nav a.nav-link:hover{
+  background-color: rgb(6, 78, 145);
+  text-shadow: 1px 1px 2px orange , -1px -1px 2px yellow;
+  border-radius: 10px;
+  
 }
-/* ------------------end navbar ------------- */
+
+/* navigation button */
+nav button input[type = "checkbox"] {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+  
+nav button .bar {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 35px;
+  text-align: center;
+}
+  
+nav button .bar span {
+  position: absolute;
+  width: 45px;
+  height: 6px;
+  border-radius: 3px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+  background-color: rgb(3, 30, 119);
+}
+  
+nav button .bar span.top {
+  top: 0;
+}
+  
+nav button .bar span.middle {
+  top: 14px;
+}
+  
+nav button .bar span.bottom {
+  bottom: 0;
+}
+  
+nav button input[type]:checked ~ span.top {
+  transform: rotate(40deg);
+  transform-origin: top left;
+  width: 50px;
+  left: 5px;
+}
+  
+nav button input[type]:checked ~ span.bottom {
+  transform: rotate(-40deg);
+  transform-origin: top left;
+  width: 50px;
+  bottom: -3px;
+  box-shadow: 0 0 10px #495057;
+}
+  
+nav button input[type]:checked ~ span.middle {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+
+/* bilbord */
+nav h6 span{
+  position: relative;
+  top: 20px;
+  opacity: 0;
+}
+
+nav h6 span:nth-child(1){
+  animation: txtmonovr1 2.5s ease infinite ;
+  color: red;
+}
+nav h6 span:nth-child(2){
+  color: blue;
+  animation: txtmonovr2 2.5s ease infinite ;
+}
+nav h6 span:nth-child(3){
+  color: green;
+  animation: txtmonovr3 2.5s ease infinite ;
+}
+
+@keyframes txtmonovr1 {
+  0%{opacity: 0; top: 20px;}
+  10%{opacity: 1; top: 0;}
+  50%{text-shadow: 1px 1px 2px purple;}
+  60%{text-shadow: none;}
+  90%{opacity: 1; top: 0;}
+  100%{opacity: 0; top: 0px;}
+}
+@keyframes txtmonovr2 {
+  0%{opacity: 0; top: 20px;}
+  20%{opacity: 1; top: 0;}
+  50%{text-shadow: 1px 1px 2px purple;}
+  60%{text-shadow: none;}
+  90%{opacity: 1; top: 0;}
+  100%{opacity: 0; top: 0px;}
+}
+@keyframes txtmonovr3 {
+  0%{opacity: 0; top: 20px;}
+  30%{opacity: 1; top: 0;}
+  50%{text-shadow: 1px 1px 2px purple;}
+  60%{text-shadow: none;}
+  90%{opacity: 1; top: 0;}
+  100%{opacity: 0; top: 0px;}
+}
+
+
+/*----------------- start section discript---------- */
+section.discript p{
+  box-shadow: 0 0 10px #b6b3b3;
+  border-radius: 15px;
+  position: relative;
+  top: 80px;
+  transition: 0.4s;
+}
+section.discript p:hover{
+  box-shadow: 0 0 20px #305496 ;
+  top: 90px;
+}
+
+section.discript img{
+  width: 70%; 
+  height: 500px;
+}
+
+section.discript span.goto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: -70px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 50px 20px white ;
+  transition: .6s;
+}
+section.discript p:hover span.goto{
+  visibility: visible;
+  opacity: 1;
+  bottom: 10px;
+}
+
+section.discript p span a i{
+  transition: all 0.4s;
+}
+section.discript p span a:hover i{
+  padding-right: 10px;
+}
+section.discript p span a {
+  transition: all 0.4s;
+  padding: 10px;
+  border-radius: 10px;
+}
+section.discript p span a:hover {
+  background-color: #305496;
+  color: #fcca31;
+}
+/*----------------- start end of section discript -----------------*/
+
+/*------------------ property --------------------------------- */
+section.property i{
+  font-size: 100px;
+}
+section.property .section{
+  transition: 0.3s;
+}
+section.property .section:hover{
+  transform: translateY(-20px);
+}
+
+section.property a.btndownload{
+  background-color: #002261;
+  border-radius: 10px;
+  height: 50px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+section.property a.btndownload:hover{
+  background-color: #300242;
+
+}
+
+
+section.property a.btndownload p , .down{
+  transition: 0.5s;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+}
+section.property a.btndownload p{
+  color: yellow;
+  top: 50%;
+}
+section.property a.btndownload span.down{
+  /* color:#002261;  */
+  font-size: 30px;
+  top: 65px;
+}
+
+section.property a.btndownload:hover p.up{
+  top: -15px;
+}
+section.property a.btndownload:hover span.down{
+  top: 50%;
+  color: #fcca31;
+}
+/*------------------ end of property --------------------------------- */
+
+/* ------------------- gllory ---------------------------------------- */
+section.gellory{
+  background: linear-gradient(to bottom right , #305496 , #fcca31 );
+}
+section.gellory .carousel-indicators{
+  transform: translateY(50px);
+}
+section.gellory h2{
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* ------------------- end of gllory ---------------------------------------- */
+
+
+/* ------------------ with-me---------------------------------- */
+section.with-me .logo{
+  width: 200px;
+  height: 200px;
+}
+/* ------------------ end of with-me---------------------------------- */
+
+
+@media screen and (max-width:992px) {
+  
+  
+}
+@media screen and (max-width:768px) {
+  section.discript p{
+    position: static;
+    top: 0px;
+  
+  }
+  section.discript p:hover{
+    position: relative;
+    top: -10px;
+  }
+  section.discript span.goto{
+    position: static;
+    box-shadow: 0px 0px 50px 20px white ;
+    visibility: visible;
+    opacity: 1;
+    background-color: #fcca31 ;
+  }
+  section.discript span.goto a{
+    background-color: #3338f8;
+    position: static;
+    padding: 10px 20px;
+    color: #fcca31;
+    border-radius: 10px;
+  }
+
+@media screen and (max-width:576px) {
+  nav a:hover{
+    background-color: lightgray;
+  }
+}
+
+}
+@media screen and (min-width:992px) {
+
+}
