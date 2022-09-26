@@ -271,8 +271,12 @@ section.with-me .logo{
   line-height: 170px;
   background: linear-gradient(to bottom right , #305496 , rgb(116, 63, 122), #fcca31 );
 }
-section.with-me .logo{
-  
+section.with-me .logo:hover{
+  animation: rotates 1s ease;
+}
+@keyframes rotates {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(1800deg);}
 }
 section.with-me p{
   font-size: 20px;
