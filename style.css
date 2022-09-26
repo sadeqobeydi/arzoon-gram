@@ -6,7 +6,13 @@
 a:hover , button:hover {
   cursor: pointer;
 }
+section , nav{
+  user-select: none;
+}
 
+html{
+  scroll-behavior: smooth;
+}
 /* ------------------navbar ------------- */
 nav{
   background: #fcca31;
@@ -200,7 +206,7 @@ section.property .section:hover{
 }
 
 section.property a.btndownload{
-  background-color: #002261;
+  background-color: #043288;
   border-radius: 10px;
   height: 50px;
   transition: 0.5s;
@@ -247,26 +253,119 @@ section.gellory .carousel-indicators{
 section.gellory h2{
   border-radius: 0px 0px 10px 10px;
 }
-
+section.gellory img{
+  border-radius: 15px;
+}
 /* ------------------- end of gllory ---------------------------------------- */
 
 
 /* ------------------ with-me---------------------------------- */
+section.with-me{
+  background: linear-gradient(to bottom right , #ffeaabc7 , #fad2ffcb ,  #d0e0ffc2 );
+}
 section.with-me .logo{
-  width: 200px;
-  height: 200px;
+  border: 3px solid rgb(25, 0, 255);
+  width: 180px;
+  height: 180px;
+  font-size: 30px;
+  line-height: 170px;
+  background: linear-gradient(to bottom right , #305496 , rgb(116, 63, 122), #fcca31 );
+}
+section.with-me .logo{
+  
+}
+section.with-me p{
+  font-size: 20px;
 }
 /* ------------------ end of with-me---------------------------------- */
 
+/* ------------------- footer ------------------------------------ */
+footer{
+  background-color: #e0e0e0;
+}
+footer .cart{
+  position: relative;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #cecece,
+  inset -6px -6px 12px #f2f2f2;
+  transition: all 0.5s;
+  height: 180px;
+  
+}
+footer .cart-head{
+  z-index: 1;
+}
+footer .cart-head i{
+  font-size: 80px ;
+}
+footer .cart-head i.fa-telegram , footer .cart .txt1logo{
+  color: #043da7;
+}
+footer .cart-head i.fa-instagram , footer .cart .txt2logo{
+  color: #a70456;
+}
+footer .cart-head i.fa-whatsapp {
+  color: rgb(66, 172, 66);
+}
+footer .cart-head .txt4logo{
+  color: #cf9b00;
+}
+
+/* //// link ////  */
+footer .cart .link{
+  position: relative;
+  top: -50px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.3s ;
+  visibility: hidden;
+}
+
+footer .cart:hover{
+  height: 250px;
+}
+
+footer .cart:hover > a.link{
+  visibility: visible;
+  top: 0px;
+  opacity: 1;
+  
+}
+/* //// end oflink ////  */
+footer img{
+  width: 200px;
+  height: 200px;
+}
+footer .adress{
+  background-color: #36373a;
+  color: rgb(255, 255, 255);
+}
+
+/* ------------------- end of footer ------------------------------------ */
+
+/* end of footer */
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////media//////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
 
 @media screen and (max-width:992px) {
   
   
 }
+/* /////////////////////////////////////////////////////////////////// */
 @media screen and (max-width:768px) {
   section.discript p{
     position: static;
-    top: 0px;
+    top:0px;
   
   }
   section.discript p:hover{
@@ -287,14 +386,16 @@ section.with-me .logo{
     color: #fcca31;
     border-radius: 10px;
   }
-
+}
+/* /////////////////////////////////////////////////////////////////// */
 @media screen and (max-width:576px) {
   nav a:hover{
     background-color: lightgray;
   }
 }
-
-}
+/* //////////////////////////////////////////////////////////////////// */
 @media screen and (min-width:992px) {
-
+  section.with-me p{
+    padding: 0px 100px;
+  }
 }
